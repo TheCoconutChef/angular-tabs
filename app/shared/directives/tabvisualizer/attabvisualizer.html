@@ -1,0 +1,8 @@
+<div id="at-tabgroup-{{tabGroupName}}">
+    <div id="at-tab-content-{{staticTab.title}}" class="at-tab-content at-tab-static" ng-repeat="staticTab in staticTabs" ng-show="tabGroup.isTabActive(staticTab)">
+        <partial id="at-tabgroup-{{tabGroupName}}-{{staticTab.title}}" template="{{staticTab.template}}" args="staticTab.args"></partial>
+    </div>
+    <div id="at-tab-content-{{tab.title}}" class="at-tab-content at-tab-dynamic" ng-repeat="tab in tabs" ng-show="tabGroup.isTabActive(tab)">
+        <partial id="at-tabgroup-{{tabGroupName}}-{{tab.title}}" template="{{tab.template}}" args="tab.args"></partial>
+    </div>
+</div>

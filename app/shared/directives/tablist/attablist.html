@@ -1,0 +1,17 @@
+<div class="at-tab-list" id="at-tablist-{{tabGroupName}}">
+    <div>
+        <div id="at-tab-{{staticTab .title}}" ng-repeat="staticTab in staticTabs" ng-class="['at-tab-static', {'at-tab-active': tabGroup.isTabActive(staticTab)}]" ng-click="activate(staticTab)">
+            <span class="at-tab-title">
+                {{staticTab .title}}
+            </span>
+        </div>
+        <div id="at-tab-{{tab.title}}" class="at-tab-dynamic" ng-repeat="tab in tabs" ng-class="{'at-tab-active': tabGroup.isTabActive(tab)}" ng-click="activate(tab)">
+            <span class="at-tab-title">        
+                {{tab.title}}
+            </span>
+            <span class="at-tab-close" ng-click="close(tab)">
+                X
+            </span>
+        </div>
+    </div>
+</div>
