@@ -12,13 +12,13 @@ angular.module('angularTabs')
             restrict: 'E',
             scope: {
                 tabGroupName: '@tabGroupName',
+                templateUrl: '@templateUrl'
             },
             controller: ['$scope', function ($scope) {
                 $scope.tabGroup = atTabManager.getTabGroup($scope.tabGroupName);
                 $scope.tabs = $scope.tabGroup.getTabs();
                 $scope.staticTabs = $scope.tabGroup.getStaticTabs();
             }],
-            link: function ($scope, elem, attrs) {},
-            templateUrl: 'shared/directives/tabvisualizer/attabvisualizer.html'
+            template: '<ng-include src="templateUrl"></ng-include>'
         };
     }]);

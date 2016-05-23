@@ -3,6 +3,7 @@
 describe('Directive: atTabList', function () {
 
     var TAB_GROUP_NAME = 'A';
+    var TEMPLATE_URL = 'test/res/attablist.html';
     var element, scope;
     var mockTabManager, mockTabGroup;
 
@@ -43,8 +44,8 @@ describe('Directive: atTabList', function () {
             }),
             addStaticTab: jasmine.createSpy('addStaticTab').and.callFake(function (tab) {}),
             removeTab: jasmine.createSpy('removeTab').and.callFake(function (tab) {
-                if(tab.title === 'tab1'){
-                    this.tabs.splice(0,1);
+                if (tab.title === 'tab1') {
+                    this.tabs.splice(0, 1);
                 }
             }),
             addTabs: jasmine.createSpy('addTabs').and.callFake(function (tabs) {}),
@@ -68,7 +69,7 @@ describe('Directive: atTabList', function () {
 
     beforeEach(inject(function ($rootScope, $compile) {
         scope = $rootScope.$new();
-        var elem = angular.element('<at-tab-list at-tab-group="' + TAB_GROUP_NAME + '"></at-tab-list>');
+        var elem = angular.element('<at-tab-list at-tab-group="' + TAB_GROUP_NAME + '" template-url="' + TEMPLATE_URL + '"></at-tab-list>');
         element = $($compile(elem)(scope));
         scope.$digest();
     }));

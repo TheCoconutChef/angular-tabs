@@ -12,6 +12,7 @@ angular.module('angularTabs')
             restrict: 'E',
             scope: {
                 tabGroupName: '@tabGroupName',
+                templateUrl: '@templateUrl'
             },
             controller: ['$scope', function ($scope) {
                 $scope.tabGroup = atTabManager.getTabGroup($scope.tabGroupName);
@@ -32,7 +33,6 @@ angular.module('angularTabs')
                     $scope.tabGroup.removeTab(tab);
                 };
             }],
-            link: function ($scope, elem, attrs) {},
-            templateUrl: 'shared/directives/tablist/attablist.html'
+            template: '<ng-include src="templateUrl"></ng-include>'
         };
     }]);

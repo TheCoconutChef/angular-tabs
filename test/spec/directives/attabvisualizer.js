@@ -3,6 +3,7 @@
 describe('Directive: atTabList', function () {
 
     var TAB_GROUP_NAME = 'A';
+    var TEMPLATE_URL = 'test/res/attabvisualizer.html';
     var element, scope;
     var mockTabManager, mockTabGroup;
 
@@ -68,7 +69,7 @@ describe('Directive: atTabList', function () {
 
     beforeEach(inject(function ($rootScope, $compile) {
         scope = $rootScope.$new();
-        var elem = angular.element('<at-tab-visualizer at-tab-group="' + TAB_GROUP_NAME + '"></at-tab-list>');
+        var elem = angular.element('<at-tab-visualizer at-tab-group="' + TAB_GROUP_NAME + '" template-url="' + TEMPLATE_URL + '"></at-tab-visualizer>');
         element = $($compile(elem)(scope));
         scope.$digest();
     }));
