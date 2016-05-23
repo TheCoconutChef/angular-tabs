@@ -261,7 +261,7 @@ module.exports = function (grunt) {
          uglify: {
            dist: {
              files: {
-               '<%= yeoman.dist %>/angular-tab.js': [
+               '<%= yeoman.dist %>/angular-tab.min.js': [
                  '<%= yeoman.dist %>/angular-tab.js'
                ]
              }
