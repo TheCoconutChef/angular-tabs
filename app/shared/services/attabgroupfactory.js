@@ -149,7 +149,7 @@ angular.module('angularTabs')
                 if (tab.title === currentActiveTab.title) {
                     if (i == 0) {
                         if (staticTabs.length > 0) {
-                            currentActiveTab = staticTabs[staticTabs.length - 1];
+                            currentActiveTab = staticTabs[0];
                         } else {
                             currentActiveTab = tabs[0];
                         }
