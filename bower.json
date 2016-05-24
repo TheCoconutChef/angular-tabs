@@ -2,7 +2,7 @@
     "name": "angular-tabs",
     "version": "0.1.1",
     "main": [
-      "dist/angular-tabs.js"
+      "./dist/angular-tabs.js"
     ],
     "dependencies": {
         "angular": "^1.3.0"
