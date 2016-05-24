@@ -9,7 +9,7 @@
 angular.module('angularTabs')
     .directive('atTabList', ['atTabManager', function (atTabManager) {
         return {
-            restrict: 'E',
+            restrict: 'EA',
             scope: {
                 tabGroupName: '@tabGroupName',
                 templateUrl: '@templateUrl'
